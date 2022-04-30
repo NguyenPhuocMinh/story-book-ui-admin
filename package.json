@@ -84,8 +84,7 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx \"./src/**/*.{js,ts,tsx}\"",
     "format:check": "prettier --check \"./src/**/*.{js,json,ts,tsx,md}\"",
     "format:fix": "prettier --write \"./src/**/*.{js,json,ts,tsx,md}\"",
-    "prepare": "cd .. && husky install story-book-ui-admin/.husky",
-    "pre-commit": "lint-staged"
+    "prepare": "cd .. && husky install story-book-ui-admin/.husky"
   },
   "eslintConfig": {
     "extends": [
@@ -106,17 +105,12 @@
     ]
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
+    "./src/**/*.{js,jsx,ts,tsx}": [
       "eslint --ext .js,.ts,.tsx \"./src/**/*.{js,ts,tsx}\"",
       "prettier --write",
       "jest --bail --findRelatedTests",
       "git add"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "engines": {
     "node": ">=14.15.3"

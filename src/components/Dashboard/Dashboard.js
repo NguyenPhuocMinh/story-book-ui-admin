@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import Chart from './Chart';
 
 const DashBoard = (props) => {
-console.log("🚀 ~ file: Dashboard.js ~ line 6 ~ DashBoard ~ props", props)
+console.log("🚀 ~ file: Dashboard.js ~ line 6 ~ DashBoard ~ props 111", props)
   return (
     <Box>
       <h1>DashBoard</h1>
