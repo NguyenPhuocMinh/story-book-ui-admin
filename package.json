@@ -84,7 +84,8 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx \"./src/**/*.{js,ts,tsx}\"",
     "format:check": "prettier --check \"./src/**/*.{js,json,ts,tsx,md}\"",
     "format:fix": "prettier --write \"./src/**/*.{js,json,ts,tsx,md}\"",
-    "prepare": "cd .. && husky install story-book-ui-admin/.husky"
+    "prepare": "cd .. && husky install story-book-ui-admin/.husky",
+    "pre-commit": "lint-staged"
   },
   "eslintConfig": {
     "extends": [
