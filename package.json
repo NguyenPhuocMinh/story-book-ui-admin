@@ -80,10 +80,10 @@
     "build": "react-scripts build",
     "test": "jest --runInBand",
     "test:watch": "jest --runInBand --watch",
-    "lint:check": "eslint --color --ext .js,.ts,.tsx \"/src/**/*.{js,ts,tsx}\"",
-    "lint:fix": "eslint --fix --ext .js,.ts,.tsx \"/src/**/*.{js,ts,tsx}\"",
-    "format:check": "prettier --check \"/src/**/*.{js,json,ts,tsx,md}\"",
-    "format:fix": "prettier --write \"/src/**/*.{js,json,ts,tsx,md}\"",
+    "lint:check": "eslint --color --ext .js,.ts,.tsx \"./src/**/*.{js,ts,tsx}\"",
+    "lint:fix": "eslint --fix --ext .js,.ts,.tsx \"./src/**/*.{js,ts,tsx}\"",
+    "format:check": "prettier --check \"./src/**/*.{js,json,ts,tsx,md}\"",
+    "format:fix": "prettier --write \"./src/**/*.{js,json,ts,tsx,md}\"",
     "prepare": "cd .. && husky install story-book-ui-admin/.husky"
   },
   "eslintConfig": {
@@ -106,7 +106,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint --ext .js,.ts,.tsx \"/src/**/*.{js,ts,tsx}\"",
+      "eslint --ext .js,.ts,.tsx \"./src/**/*.{js,ts,tsx}\"",
       "prettier --write",
       "jest --bail --findRelatedTests",
       "git add"
