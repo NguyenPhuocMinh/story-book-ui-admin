@@ -106,12 +106,12 @@
     ]
   },
   "lint-staged": {
-    "./src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --ext .js,.ts,.tsx \"./src/**/*.{js,ts,tsx}\"",
-      "prettier --write",
-      "jest --bail --findRelatedTests",
-      "git add"
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
     ]
+  },
+  "hooks": {
+    "pre-commit": "lint-staged"
   },
   "engines": {
     "node": ">=14.15.3"
