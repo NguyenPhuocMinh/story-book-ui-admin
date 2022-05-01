@@ -95,10 +95,10 @@
   },
   "lint-staged": {
     "src/**/*.{js,ts,jsx,tsx}": [
-      "eslint --color --ext .js,.ts,.tsx \"./src/**/*.{js,ts,tsx}\"",
-      "prettier --check \"./src/**/*.{js,json,ts,tsx,md}\""
-    ],
-    "*.js": "eslint --cache --fix"
+      "eslint --ext .js",
+      "prettier --write",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
