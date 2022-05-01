@@ -1,4 +1,3 @@
-import React from 'react';
 import { NotificationBootStrap } from 'story-bootstrap';
 import { Box } from '@mui/material';
 import Chart from './Chart';

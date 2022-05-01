@@ -1,6 +1,4 @@
-import React from 'react';
 import { useTranslate } from 'story-bootstrap';
-import { useSelector } from 'react-redux';
 // material ui
 import { Grid, Box, Paper, Card, CardContent } from '@mui/material';
 import {
@@ -11,21 +9,23 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend,
+  Legend
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { handleDataChart } from './Utils';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
-const Chart = (props) => {
+const Chart = () => {
   const { translate } = useTranslate();
-
-  const { spin } = useSelector((state) => {
-    return {
-      spin: state.admin.spin,
-    };
-  });
 
   const { data, options } = handleDataChart(translate);
 
